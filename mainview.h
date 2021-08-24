@@ -2,6 +2,10 @@
 #define MAINVIEW_H
 
 #include <QMainWindow>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainView; }
@@ -16,6 +20,10 @@ public:
     ~MainView();
 
 private:
+    void PopulateTable();
+
     Ui::MainView *ui;
+
+    QSqlDatabase DataBase;
 };
 #endif // MAINVIEW_H
